@@ -1,13 +1,13 @@
 //new
 $white: #fff;
 $black: #000;
-$blue: #51ADE5;
 
 $primary: #B8DDFF;
 $secondary: #414B54;
 $tertiary: #F57343;
 $grey-dark: #D9D9D9;
 $grey-light: #F8F8F8;
+$light: $white;
 
 
 
@@ -15,7 +15,7 @@ $grey-light: #F8F8F8;
 /* reset */
 $container-indents-x: 15px;
 $min-width: 320px;
-$max-width: 1180px; // 1140 + 20 + 20
+$max-width: calc(1194px + $container-indents-x * 2); // 1140 + 20 + 20
 $base-bg: $grey-light;
 
 $base-font-size: 18px;
@@ -48,3 +48,9 @@ $desktop-media: 1280px;
 $tablet-media: 1024px;
 $mobile-wide-media: 767px;
 $mobile-media: 576px;
+
+
+$button-search-left-width: 200px;
+$button-search-right-width: 45px;
+$control-height: 34px;
+$control-height-mobile: 30px;

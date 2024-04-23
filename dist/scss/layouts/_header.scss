@@ -2,6 +2,277 @@
   flex-shrink: 0;
   flex-grow: 0;
 
+  .headerTop {
+    background-color: $primary;
+    padding: 25px 0 21px;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-top: 13px;
+      padding-bottom: 10px;
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &__menuWrap {
+      @media screen and (max-width: $tablet-media) {
+        display: none;
+      }
+    }
+
+    &__menu {
+      display: flex;
+      justify-content: flex-start;
+      gap: 64px;
+    }
+
+    &__menuItem {}
+
+    &__menuLink {
+      font-weight: 700;
+      color: $secondary;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    &__controlsWrap {
+      display: flex;
+      justify-content: flex-start;
+      gap: 25px;
+
+      @media screen and (max-width: $tablet-media) {
+        flex-grow: 1;
+      }
+    }
+
+    &__controlsItem {
+      flex-shrink: 0;
+
+      &.m-tertiary {
+        display: none;
+      }
+
+      @media screen and (max-width: $tablet-media) {
+        display: none;
+
+        &.m-primary,
+        &.m-tertiary {
+          display: block;
+        }
+
+        &.m-tertiary {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+
+
+  &__control {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border-radius: calc($control-height / 2);
+    height: $control-height;
+    border: 2px solid $secondary;
+    padding: 0;
+
+    @media screen and (max-width: $tablet-media) {
+      border-radius: calc($control-height-mobile / 2);
+      height: $control-height-mobile;
+    }
+
+
+    &.m-secondary {
+      border-color: $tertiary;
+      background-color: $tertiary;
+
+      .header__controlText {
+        color: $light;
+      }
+
+      .header__controlIcon {
+        background-color: $tertiary;
+      }
+    }
+
+    &.m-tertiary {
+      border-color: transparent;
+      background-color: transparent;
+
+      .header__controlIcon {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__controlText {
+    font-size: 16px;
+    font-weight: 700;
+    color: $secondary;
+    padding: 0 0 0 15px;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 14px;
+      padding-left: 13px;
+    }
+  }
+
+  &__controlIcon {
+    width: $control-height;
+    height: $control-height;
+    border-radius: 50%;
+    background-color: $secondary;
+    color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 700;
+
+    @media screen and (max-width: $tablet-media) {
+      width: $control-height-mobile;
+      height: $control-height-mobile;
+    }
+  }
+
+  .headerBottom {
+    padding: 36px 0;
+    background-color: $light;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &__logoWrap {
+      width: 63px;
+      height: 47px;
+      flex-shrink: 0;
+
+      @media screen and (max-width: $tablet-media) {
+        width: 56px;
+        height: 42px;
+      }
+
+    }
+
+    &__logoLink {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__logoImg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__searchWrap {
+      flex-grow: 1;
+      max-width: 650px;
+
+      @media screen and (max-width: $tablet-media) {
+        display: none;
+      }
+    }
+
+    &__search {
+      height: $control-height;
+      border-radius: calc($control-height / 2);
+      border: 1px solid $primary;
+      overflow: hidden;
+      position: relative;
+
+      @media screen and (max-width: $tablet-media) {
+        height: $control-height-mobile;
+        border-radius: calc($control-height-mobile / 2);
+      }
+
+      form {
+        height: 100%;
+      }
+    }
+
+    &__searchBtnExtends {
+      position: absolute;
+      height: $control-height;
+      padding: 0 5px 0 19px;
+      width: $button-search-left-width;
+      border: none;
+      background-color: $primary;
+      color: $secondary;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 700;
+      left: 0;
+      top: 0;
+
+      @media screen and (max-width: $tablet-media) {
+        height: $control-height-mobile;
+      }
+    }
+
+    &__searchInput {
+      width: 100%;
+      height: 100%;
+      background-color: $light;
+      border: none;
+      padding-left: calc($button-search-left-width + 10px);
+      padding-right: calc($button-search-right-width + 10px);
+      color: $secondary;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &__searchBtn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      padding: 0;
+      width: $button-search-right-width;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+    }
+
+    &__searchIcon {
+      width: 24px;
+      height: 18px;
+    }
+
+    &__controlsWrap {
+      display: flex;
+      justify-content: flex-start;
+      gap: 18px;
+
+      @media screen and (max-width: $tablet-media) {
+        gap: 8px;
+      }
+    }
+
+    &__controlsItem {
+      flex-shrink: 0;
+    }
+  }
+
 
   @media screen and (max-width: $desktop-media) {}
 
