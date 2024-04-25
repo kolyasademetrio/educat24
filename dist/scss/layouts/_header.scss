@@ -81,10 +81,13 @@
     height: $control-height;
     border: 2px solid $secondary;
     padding: 0;
+    position: relative;
+    padding: 0 $control-height 0 0;
 
     @media screen and (max-width: $tablet-media) {
       border-radius: calc($control-height-mobile / 2);
       height: $control-height-mobile;
+      padding-right: $control-height-mobile;
     }
 
 
@@ -115,7 +118,7 @@
     font-size: 16px;
     font-weight: 700;
     color: $secondary;
-    padding: 0 0 0 15px;
+    padding: 0 9px 0 15px;
 
     @media screen and (max-width: $tablet-media) {
       font-size: 14px;
@@ -124,8 +127,8 @@
   }
 
   &__controlIcon {
-    width: $control-height;
-    height: $control-height;
+    width: calc($control-height);
+    height: calc($control-height);
     border-radius: 50%;
     background-color: $secondary;
     color: $primary;
@@ -135,10 +138,20 @@
     font-size: 16px;
     line-height: 1;
     font-weight: 700;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
 
     @media screen and (max-width: $tablet-media) {
-      width: $control-height-mobile;
-      height: $control-height-mobile;
+      width: calc($control-height-mobile);
+      height: calc($control-height-mobile);
+
+      .cart-icon {
+        width: 19px;
+        height: 18px;
+        stroke-width: 1;
+      }
     }
   }
 
