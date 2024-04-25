@@ -88,3 +88,19 @@
   font-family: $font-f;
   font-weight: $font-w;
 }
+
+@mixin aspect-ratio-wrap($width, $height) {
+  height: 0;
+  position: relative;
+  padding-top: $height / $width * 100%;
+}
+
+@mixin aspect-ratio-image() {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}

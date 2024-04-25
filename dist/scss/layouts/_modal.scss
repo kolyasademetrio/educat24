@@ -1,0 +1,104 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+
+  &.m-active {
+    display: block;
+    z-index: 10;
+  }
+}
+
+.js-menu {}
+
+.modal__inner {
+  max-width: 375px;
+  background-color: $light;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px 32px 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.modal__btnClose {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid $secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $secondary;
+  font-size: 21px;
+  line-height: 1;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.modal__content {}
+
+.modal__menu {}
+
+.modal__menuNav {
+  padding: 0 0 30px;
+}
+
+.modal__menuList {}
+
+.modal__menuListItem {
+  border-bottom: 1px solid $primary;
+}
+
+.modal__menuListItemLink {
+  color: $secondary;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 12px 12px;
+  display: block;
+}
+
+.modal__menuNavSecondary {
+  padding: 0 0 27px;
+}
+
+.modal__menuListSecondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.modal__menuListItemSecondary {}
+
+.modal__menuLinkWrap {
+  display: flex;
+  justify-content: center;
+
+  .header__control {
+    max-width: 233px;
+    flex-grow: 1;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: -1;
+  display: none;
+
+  &.m-active {
+    display: block;
+    z-index: 1;
+  }
+}
