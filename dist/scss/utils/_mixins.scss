@@ -92,7 +92,7 @@
 @mixin aspect-ratio-wrap($width, $height) {
   height: 0;
   position: relative;
-  padding-top: $height / $width * 100%;
+  padding-top: calc($height / $width) * 100%;
 }
 
 @mixin aspect-ratio-image() {
