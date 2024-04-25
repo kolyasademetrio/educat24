@@ -458,6 +458,14 @@ img {
   &__header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 5px;
+
+    @media screen and (max-width: $tablet-media) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
   }
 
   &__title {
@@ -466,11 +474,21 @@ img {
     justify-content: flex-start;
     gap: 18px;
     align-items: baseline;
+
+    @media screen and (max-width: $tablet-media) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__titleText {
     font-weight: 700;
     font-size: 36px;
+    line-height: 1.1;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 20px;
+    }
   }
 
   &__titleRate {
@@ -481,6 +499,9 @@ img {
     border-radius: 5px;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
 
+    @media screen and (max-width: $tablet-media) {
+      font-size: 14px;
+    }
   }
 
   &__addButton {
@@ -496,6 +517,11 @@ img {
     align-items: center;
     padding: 13px 19px;
     margin-top: 5px;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
   }
 
   &__rate {
@@ -504,9 +530,14 @@ img {
 
   &__reviews {
     padding: 86px 0 48px;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 
-  &__breadcrambs {
+  &__pagination {
     background-color: $white;
     border-radius: $section-border-radius;
     box-shadow: $section-box-shadow;
@@ -519,7 +550,7 @@ img {
   }
 }
 
-.breadcrambs {
+.pagination {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -538,12 +569,23 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 10px;
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__arrow {
     width: 14px;
     height: 14px;
     display: block;
+
+    @media screen and (max-width: $tablet-media) {
+      width: 11px;
+      height: 11px;
+    }
 
     &.m-prev {
       transform: rotate(180deg);
@@ -565,8 +607,20 @@ img {
   flex-wrap: wrap;
   gap: 118px;
 
+  @media screen and (max-width: $tablet-media) {
+    gap: 30px;
+  }
+
   &__item {
     width: calc((100% - 118px * 2) / 3);
+
+    @media screen and (max-width: $tablet-media) {
+      width: calc((100% - 30px * 2) / 2);
+    }
+
+    @media screen and (max-width: $mobile-wide-media) {
+      width: 100%;
+    }
   }
 
   &__itemHeader {
@@ -575,16 +629,28 @@ img {
     color: $secondary;
     align-items: baseline;
     padding: 0 0 20px;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-bottom: 2px;
+    }
   }
 
   &__itemTitle {
     font-size: 24px;
     font-weight: 700;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 16px;
+    }
   }
 
   &__itemRate {
     font-size: 20px;
     font-weight: 500;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 14px;
+    }
   }
 
   &__itemFooter {
@@ -605,6 +671,10 @@ img {
   flex-direction: column;
   gap: 44px;
 
+  @media screen and (max-width: $tablet-media) {
+    gap: 26px;
+  }
+
   &__item {
     background-color: $white;
     border-radius: $section-border-radius;
@@ -623,23 +693,42 @@ img {
     display: flex;
     justify-content: space-between;
     padding: 0 0 20px;
+
+    @media screen and (max-width: $tablet-media) {
+      padding-bottom: 12px;
+    }
   }
 
   &__itemUser {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     gap: 16px;
+
+    @media screen and (max-width: $tablet-media) {
+      gap: 9px;
+    }
   }
 
   &__itemUserImgWrap {
     width: 40px;
     height: 40px;
+
+    @media screen and (max-width: $tablet-media) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__itemUserImg {
     width: 40px;
     height: 40px;
     display: block;
+
+    @media screen and (max-width: $tablet-media) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__itemUserInfo {
@@ -650,12 +739,20 @@ img {
     font-size: 24px;
     font-weight: 700;
     line-height: 1;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 14px;
+    }
   }
 
   &__itemUserText {
     font-size: 16px;
     font-weight: 500;
     line-height: 1;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 10px;
+    }
   }
 
   &__itemUserRate {
@@ -683,5 +780,25 @@ img {
     color: $secondary;
     text-transform: none;
     line-height: 1.4;
+
+    @media screen and (max-width: $tablet-media) {
+      font-size: 12px;
+    }
+  }
+}
+
+.addSection {
+  background-color: $white;
+  padding: 83px 0 58px;
+}
+
+.adds {
+  border-radius: 8px;
+  overflow: hidden;
+
+  .adds__image {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
